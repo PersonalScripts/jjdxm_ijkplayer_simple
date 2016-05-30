@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_bottom_bar"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#CC000000"
+                android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/app_video_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:src="@drawable/simple_player_arrow_white_24dp"/>
+
+    <TextView
+        android:id="@+id/app_video_currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/app_video_play"
+        android:text="06:21"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        />
+
+    <SeekBar
+        android:id="@+id/app_video_seekBar"
+        style="@style/SeekBarAppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/app_video_endTime"
+        android:layout_toRightOf="@+id/app_video_currentTime"
+        />
+
+    <TextView
+        android:id="@+id/app_video_endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/app_video_stream"
+        android:text="10:10"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:id="@+id/app_video_stream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/app_video_fullscreen"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingLeft="8dp"
+        android:text="标清"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"/>
+
+    <ImageView
+        android:id="@+id/app_video_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:src="@drawable/simple_player_icon_fullscreen_stretch"/>
+
+</RelativeLayout>
