@@ -7,7 +7,10 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     //noinspection GroovyAssignabilityCheck
     buildToolsVersion rootProject.ext.buildToolsVersion
-
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
     lintOptions {
         abortOnError false
     }
@@ -19,7 +22,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

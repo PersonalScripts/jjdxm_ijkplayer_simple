@@ -469,6 +469,9 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                     if (mOnCompletionListener != null) {
                         mOnCompletionListener.onCompletion(mMediaPlayer);
                     }
+                    if (mOnInfoListener != null) {
+                        mOnInfoListener.onInfo(mMediaPlayer, PlayStateParams.STATE_COMPLETED, 0);
+                    }
                 }
             };
 
@@ -500,9 +503,13 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                         mMediaController.hide();
                     }
 
-                    /* If an error handler has been supplied, use it and finish. */
+
                     if (mOnErrorListener != null) {
-                        if (mOnErrorListener.onError(mMediaPlayer, framework_err, impl_err)) {
+                        mOnErrorListener.onError(mMediaPlayer, framework_err, impl_err);
+                    }
+                    /* If an error handler has been supplied, use it and finish. */
+                    if (mOnInfoListener != null) {
+                        if (mOnInfoListener.onInfo(mMediaPlayer, framework_err, 0)) {
                             return true;
                         }
                     }

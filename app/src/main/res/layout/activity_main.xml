@@ -21,4 +21,10 @@
         android:layout_height="wrap_content"
         android:text="player"
         android:id="@+id/btn_player"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="live"
+        android:id="@+id/btn_live"/>
 </LinearLayout>
