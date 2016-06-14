@@ -756,7 +756,6 @@ public class LivePlayerView {
                     showStatus(mActivity.getResources().getString(ResourceUtils.getResourceIdByName(mContext, "string", "small_problem")));
                 }
             }
-
         }
     }
 
